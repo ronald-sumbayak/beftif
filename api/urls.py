@@ -1,13 +1,14 @@
 from django.conf.urls import url, include
 from rest_framework import routers
 
-from api.views import NewsViewSet, CategoryViewSet
+from api.views import CategoryViewSet, NewsList, RetrieveNews
 
-router = routers.SimpleRouter()
-router.register (r'news', NewsViewSet)
+router = routers.SimpleRouter ()
 router.register (r'categories', CategoryViewSet)
 
 urlpatterns = [
+    url (r'^news/$', NewsList.as_view ()),
+    url (r'^news/(?P<pk>[\d]+)$', RetrieveNews.as_view ()),
     url (r'^media/', include ('api.media.urls'))
 ]
 
