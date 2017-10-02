@@ -88,7 +88,7 @@ DATABASES = {
     }
 }
 
-DATABASES.update (dj_database_url.config ())
+DATABASES['default'].update (dj_database_url.config ())
 
 
 # Password validation
