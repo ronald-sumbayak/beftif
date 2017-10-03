@@ -1,6 +1,5 @@
-from rest_framework.filters import OrderingFilter, SearchFilter
+from django.http import HttpResponse
 from rest_framework.generics import ListAPIView, RetrieveAPIView, get_object_or_404
-from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from api.serializers import CategorySerializer, NewsSerializer
@@ -8,7 +7,7 @@ from core.models import Category, News
 
 
 def test (request):
-    return Response ("v.0.0.2")
+    return HttpResponse ("v.0.0.2")
 
 
 class NewsList (ListAPIView):
