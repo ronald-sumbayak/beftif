@@ -1,5 +1,6 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from rest_framework.generics import ListAPIView, RetrieveAPIView, get_object_or_404
+from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from api.serializers import CategorySerializer, NewsSerializer
@@ -7,7 +8,7 @@ from core.models import Category, News
 
 
 def test (request):
-    return HttpResponse ("v.0.0.2")
+    return JsonResponse ({"version": "v.0.0.2"})
 
 
 class NewsList (ListAPIView):
