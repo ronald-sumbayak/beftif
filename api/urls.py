@@ -8,7 +8,7 @@ router = routers.SimpleRouter ()
 router.register (r'categories', CategoryViewSet)
 
 urlpatterns = [
-    url (r'^test$', views.test),
+    url (r'^$', views.test),
     url (r'^news$', NewsList.as_view ()),
     url (r'^news/(?P<pk>[\d]+)$', RetrieveNews.as_view ()),
     url (r'^media/', include ('api.media.urls'))

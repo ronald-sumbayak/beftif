@@ -7,7 +7,7 @@ from core.models import Category, News
 
 
 def test (request):
-    return JsonResponse ({"version": "v.0.0.2"})
+    return JsonResponse ({"version": "v0.0.2"})
 
 
 class NewsList (ListAPIView):
