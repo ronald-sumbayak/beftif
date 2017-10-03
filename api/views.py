@@ -1,6 +1,5 @@
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from rest_framework.generics import ListAPIView, RetrieveAPIView, get_object_or_404
-from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from api.serializers import CategorySerializer, NewsSerializer
