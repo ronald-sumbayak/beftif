@@ -34,5 +34,3 @@ class Popularity (models.Model):
     
     def __str__ (self):
         return str (self.news)
-
-post_save.c
